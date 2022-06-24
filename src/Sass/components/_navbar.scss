@@ -1,0 +1,79 @@
+@use "../utils" as *;
+@use "../mixins" as *;
+
+nav {
+  @include displayFlex(space-around);
+  height: 100px;
+  width: 100%;
+  position: relative;
+
+  img {
+    height: 70%;
+  }
+
+  #toggle-btn {
+    display: none;
+    font-size: map-get($font-sizes, "lg");
+    color: $secondary-color;
+
+    @include breakpoints(600px) {
+      @include displayFlex(space-between);
+      display: block;
+    }
+  }
+
+  #toggle-sidebar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 25%;
+    top: calc(100% - 25px);
+    z-index: 100000;
+    font-size: map-get($font-sizes, "lg");
+
+    @include breakpoints(600px) {
+      right: 10%;
+    }
+  }
+
+  ul {
+    @include displayFlex(center);
+
+    @include breakpoints(600px) {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      gap: 0;
+      height: 0px;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    li {
+      transition: $transition;
+      font-size: map-get($font-sizes, "md");
+
+      @include breakpoints(600px) {
+        color: $main-font-light;
+        background: $secondary-color;
+        width: 100%;
+        border-radius: 0;
+        height: 50px;
+        @include displayFlex(flex-start);
+        border-bottom: $border-style;
+      }
+
+      &:hover {
+        background: $main-bg-dark;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .show-links {
+    height: calc(100vh - 100px);
+  }
+}

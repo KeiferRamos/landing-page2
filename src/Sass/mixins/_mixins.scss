@@ -1,0 +1,23 @@
+@mixin displayFlex($justify, $align: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin displayGrid($bp: 360px, $place: center) {
+  display: grid;
+  place-items: $place;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax($bp, auto));
+}
+
+@mixin breakpoints($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin setProps($key, $val) {
+  #{$key}: #{$val};
+}

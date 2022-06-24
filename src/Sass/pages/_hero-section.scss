@@ -1,0 +1,106 @@
+@use "../mixins" as *;
+@use "../utils" as *;
+
+.hero-section {
+  @include displayFlex(space-between);
+  font-size: map-get($font-sizes, "lg");
+  height: calc(100% - 100px);
+  position: relative;
+  overflow: hidden;
+
+  i {
+    font-size: map-get($font-sizes, "xl");
+
+    @include breakpoints(700px) {
+      display: none;
+    }
+  }
+
+  .next-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include displayFlex(center);
+    font-size: map-get($font-sizes, "md");
+
+    div {
+      flex: 1;
+      @include displayFlex(space-between);
+      height: 100px;
+      cursor: pointer;
+
+      @include breakpoints(850px) {
+        height: 60px;
+        justify-content: center;
+      }
+
+      .title {
+        flex: 1;
+        @include breakpoints(850px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .selection {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: red;
+    height: 100px;
+    width: 100%;
+    display: flex;
+
+    div {
+      background: blue;
+      flex: 1;
+      height: 100%;
+      @include displayFlex(center);
+      border: $border-style;
+    }
+  }
+
+  #container {
+    @include displayGrid(500px);
+    height: calc(100% - 100px);
+    flex: 1;
+
+    @include breakpoints(1200px) {
+      text-align: center;
+    }
+
+    @include breakpoints(600px) {
+      @include displayGrid(100%);
+      font-size: map-get($font-sizes, "md");
+    }
+
+    button {
+      padding: 5px 20px;
+      margin-top: 10px;
+      font-size: 20px;
+      border-radius: 20px;
+      background: $main-bg-dark;
+      color: $secondary-color;
+    }
+
+    .img-container {
+      display: grid;
+      place-items: center;
+      height: 500px;
+      width: 500px;
+
+      @include breakpoints(1200px) {
+        height: 300px;
+        width: 300px;
+      }
+
+      img {
+        @include breakpoints(360px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
