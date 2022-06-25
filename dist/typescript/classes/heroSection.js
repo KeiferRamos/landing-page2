@@ -2,11 +2,23 @@ export class displayContent {
     constructor(content) {
         this.content = content;
         this.currentDisplay = 0;
+        this.timer = null;
         this.displayContent = this.content[this.currentDisplay];
     }
     format(id) {
         const container = document.getElementById(id);
         const { details, title, img } = this.displayContent;
+        this.timer = window.setTimeout(() => {
+            if (this.currentDisplay >= this.content.length - 1) {
+                this.currentDisplay = 0;
+            }
+            else {
+                this.currentDisplay = this.currentDisplay += 1;
+            }
+            this.displayContent = this.content[this.currentDisplay];
+            this.format("container");
+            console.log("g");
+        }, 1700);
         container.innerHTML = `
         <header>
             <h1 class="mb-2">${title}</h1>
@@ -22,6 +34,7 @@ export class displayContent {
         const heroBtns = document.querySelectorAll("#hero-btn");
         heroBtns.forEach((btn, i) => {
             btn.addEventListener("click", () => {
+                clearTimeout(this.timer);
                 this.currentDisplay = i;
                 this.displayContent = this.content[this.currentDisplay];
                 this.format("container");
@@ -48,6 +61,7 @@ export class displayContent {
         const arrows = document.querySelectorAll("#arrow");
         arrows.forEach((arrow) => {
             arrow.addEventListener("click", (e) => {
+                clearTimeout(this.timer);
                 const className = e.target.classList;
                 if (className.contains("fa-arrow-right")) {
                     if (this.currentDisplay >= this.content.length - 1) {

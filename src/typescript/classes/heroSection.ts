@@ -2,6 +2,7 @@ import { heroSection } from "../interfaces/heroSection";
 
 export class displayContent {
   currentDisplay: number = 0;
+  timer: any = null;
   displayContent = this.content[this.currentDisplay];
 
   constructor(private content: heroSection[]) {}
@@ -9,6 +10,17 @@ export class displayContent {
   format(id: string) {
     const container = document.getElementById(id) as HTMLDivElement;
     const { details, title, img } = this.displayContent;
+
+    this.timer = window.setTimeout(() => {
+      if (this.currentDisplay >= this.content.length - 1) {
+        this.currentDisplay = 0;
+      } else {
+        this.currentDisplay = this.currentDisplay += 1;
+      }
+      this.displayContent = this.content[this.currentDisplay];
+      this.format("container");
+      console.log("g");
+    }, 1700);
 
     container.innerHTML = `
         <header>
@@ -29,6 +41,7 @@ export class displayContent {
 
     heroBtns.forEach((btn, i) => {
       btn.addEventListener("click", () => {
+        clearTimeout(this.timer);
         this.currentDisplay = i;
         this.displayContent = this.content[this.currentDisplay];
         this.format("container");
@@ -64,6 +77,7 @@ export class displayContent {
 
     arrows.forEach((arrow) => {
       arrow.addEventListener("click", (e) => {
+        clearTimeout(this.timer);
         const className = (e.target as HTMLElement).classList;
         if (className.contains("fa-arrow-right")) {
           if (this.currentDisplay >= this.content.length - 1) {
