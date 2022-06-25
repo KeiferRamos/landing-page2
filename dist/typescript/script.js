@@ -1,6 +1,8 @@
 import { displayContent } from "./classes/heroSection.js";
+import { serviceDisplay } from "./classes/service.js";
 import { sidebarDisplay } from "./classes/sidebar.js";
 import { hero } from "./data/heroSection.js";
+import { expertise, serviceData } from "./data/service.js";
 import { sidebarData } from "./data/sidebar.js";
 const toggleNav = document.getElementById("toggle-btn");
 const toggleSide = document.getElementById("toggle-sidebar");
@@ -28,4 +30,8 @@ window.addEventListener("DOMContentLoaded", () => {
     HeroContent.setSelected();
     const displaySidebarContent = new sidebarDisplay(sidebarData);
     displaySidebarContent.format(sidebar);
+    const displayServiceContent = new serviceDisplay(serviceData);
+    displayServiceContent.format(".service-container");
+    const displayExpertiseContent = new serviceDisplay(expertise);
+    displayExpertiseContent.format(".expertise-container");
 });
