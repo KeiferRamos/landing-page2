@@ -1,3 +1,4 @@
+import { footerDisplay } from "./classes/footer.js";
 import { displayContent } from "./classes/heroSection.js";
 import { serviceDisplay } from "./classes/service.js";
 import { sidebarDisplay } from "./classes/sidebar.js";
@@ -41,4 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const displayExpertiseContent = new serviceDisplay(expertise);
   displayExpertiseContent.format(".expertise-container");
+
+  const displayFooterContent = new footerDisplay(sidebarData);
+  displayFooterContent.format("footer");
 });

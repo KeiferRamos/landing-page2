@@ -1,7 +1,7 @@
-import { contacts, sidebarContent } from "../interfaces/sidebar";
+import { contacts, info } from "../interfaces/info";
 
 export class sidebarDisplay {
-  constructor(private sidebarContent: sidebarContent) {}
+  constructor(private sidebarContent: info) {}
 
   format(div: HTMLElement) {
     const { img, text, contacts } = this.sidebarContent;

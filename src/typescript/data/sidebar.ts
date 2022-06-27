@@ -1,6 +1,6 @@
-import { sidebarContent } from "../interfaces/sidebar";
+import { info } from "../interfaces/info";
 
-export const sidebarData: sidebarContent = {
+export const sidebarData: info = {
   img: "https://bananweb.com/wp-content/uploads/2019/11/banan-logo-final-H-1.png",
   text: [
     `At Banan Digital Agency, we strive to provide the best quality of

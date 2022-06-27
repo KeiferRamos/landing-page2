@@ -1,4 +1,4 @@
-export interface sidebarContent {
+export interface info {
   img: string;
   text: string[];
   contacts: contacts[];
@@ -7,4 +7,9 @@ export interface sidebarContent {
 export interface contacts {
   img: string;
   details: string[];
+}
+
+export interface socialMedia {
+  img: string;
+  path: string;
 }

@@ -1,0 +1,87 @@
+@use "../mixins" as *;
+@use "../utils" as *;
+
+footer {
+  display: grid;
+  place-items: center;
+  background: $main-bg-dark;
+  color: $secondary-color;
+  position: relative;
+  padding-bottom: 60px;
+
+  h2 {
+    color: $main-font-light;
+    // border-bottom: 1px solid #11bfbb;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 25%;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+      background: #11bfbb;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 72%;
+      bottom: 0;
+      right: 0;
+      border-radius: 3px;
+      background: #11bfbb;
+    }
+  }
+
+  .footer-content {
+    width: 1200px;
+
+    @include breakpoints(1200px) {
+      width: 100%;
+    }
+
+    .footer-info {
+      width: 600px;
+
+      .social-medias {
+        @include displayFlex(flex-start);
+        img {
+          width: 30px;
+        }
+      }
+
+      @include breakpoints(1200px) {
+        width: 100%;
+      }
+    }
+
+    .contacts {
+      @include displayFlex(space-between);
+      border-top: $border-style;
+
+      div {
+        @extend .contacts;
+        border: none;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .footer-end {
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: $tertiary-bg;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

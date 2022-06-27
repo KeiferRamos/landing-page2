@@ -1,5 +1,5 @@
-@use "../mixins" as *;
-@use "../utils" as *;
+@use "../../mixins" as *;
+@use "../../utils" as *;
 
 .hero-section {
   @include displayFlex(space-between);

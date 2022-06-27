@@ -1,5 +1,5 @@
-@use "../mixins" as *;
-@use "../utils" as *;
+@use "../../mixins" as *;
+@use "../../utils" as *;
 
 #services {
   display: grid;
@@ -42,6 +42,7 @@
   .expertise-container {
     width: 100%;
     background: url(https://bananweb.com/wp-content/themes/seosight/images/animated/mountain2.png);
+    background-size: cover;
   }
 
   button {
