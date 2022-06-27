@@ -1,0 +1,20 @@
+@use "../../mixins" as *;
+@use "../../utils" as *;
+
+.qoutes {
+  background: #232f36;
+  height: 400px;
+  font-size: map-get($map: $font-sizes, $key: "lg");
+  color: $main-font-light;
+  @include displayFlex(center);
+  text-align: center;
+
+  button {
+    height: 60px;
+    width: 160px;
+    border-radius: 50px;
+    background: $neon;
+    color: $main-font-light;
+    position: relative;
+  }
+}

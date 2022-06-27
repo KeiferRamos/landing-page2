@@ -13,3 +13,8 @@ export interface socialMedia {
   img: string;
   path: string;
 }
+
+export interface serviceLink {
+  path: string;
+  name: string;
+}

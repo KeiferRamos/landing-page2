@@ -11,30 +11,6 @@ footer {
 
   h2 {
     color: $main-font-light;
-    // border-bottom: 1px solid #11bfbb;
-    display: inline-block;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 3px;
-      width: 25%;
-      bottom: 0;
-      left: 0;
-      border-radius: 3px;
-      background: #11bfbb;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      height: 3px;
-      width: 72%;
-      bottom: 0;
-      right: 0;
-      border-radius: 3px;
-      background: #11bfbb;
-    }
   }
 
   .footer-content {
@@ -44,8 +20,12 @@ footer {
       width: 100%;
     }
 
+    .info-container {
+      @include displayFlex(space-between);
+    }
+
     .footer-info {
-      width: 600px;
+      width: 500px;
 
       .social-medias {
         @include displayFlex(flex-start);
@@ -56,6 +36,19 @@ footer {
 
       @include breakpoints(1200px) {
         width: 100%;
+      }
+    }
+
+    .service-links {
+      width: 250px;
+      a {
+        @include displayFlex(flex-start);
+        transition: $transition;
+
+        &:hover {
+          padding-left: 20px;
+          color: #11bfbb;
+        }
       }
     }
 
@@ -80,8 +73,13 @@ footer {
     place-items: center;
     background: $tertiary-bg;
     width: 100%;
+    text-align: center;
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @include breakpoints(360px) {
+      height: 60px;
+    }
   }
 }

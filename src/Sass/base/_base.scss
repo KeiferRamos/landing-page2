@@ -27,3 +27,29 @@ ul {
 button {
   border: none;
 }
+
+h2 {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 25%;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    background: #11bfbb;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 72%;
+    bottom: 0;
+    right: 0;
+    border-radius: 3px;
+    background: #11bfbb;
+  }
+}
