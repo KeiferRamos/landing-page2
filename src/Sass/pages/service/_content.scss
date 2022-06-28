@@ -18,6 +18,11 @@
       height: 600px;
       padding: 30px 40px;
       display: grid;
+
+      @include breakpoints(600px) {
+        width: 330px;
+        padding: 10px 20px;
+      }
     }
   }
 }
