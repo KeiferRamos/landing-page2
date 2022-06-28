@@ -1,0 +1,57 @@
+@use "../../utils" as *;
+@use "../../mixins" as *;
+
+.request-form {
+  header {
+    text-align: center;
+
+    h2 {
+      font-size: map-get($map: $font-sizes, $key: "xl");
+
+      @include breakpoints(400px) {
+        font-size: map-get($map: $font-sizes, $key: "lg");
+      }
+    }
+  }
+
+  .form-container {
+    @include displayFlex(center);
+    align-items: flex-start;
+
+    img {
+      width: 450px;
+      height: 450px;
+
+      @include breakpoints(450px) {
+        width: 100%;
+      }
+    }
+
+    #form {
+      display: grid;
+      max-width: 700px;
+
+      input[type="text"] {
+        height: 60px;
+        border: none;
+        background: #c7e3f1;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    textarea {
+      height: 150px;
+      background: #c7e3f1;
+      border-radius: 5px;
+    }
+  }
+
+  .send-form {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background: $neon;
+    color: $main-font-light;
+  }
+}

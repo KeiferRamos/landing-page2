@@ -1,10 +1,9 @@
+import { sidebarData } from "../data/sidebar.js";
 export class sidebarDisplay {
-    constructor(sidebarContent) {
-        this.sidebarContent = sidebarContent;
-    }
-    format(div) {
-        const { img, text, contacts } = this.sidebarContent;
-        div.innerHTML = ` 
+    format(id) {
+        const { img, text, contacts } = sidebarData;
+        const sidebar = document.querySelector(id);
+        sidebar.innerHTML = ` 
       <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
       <img class="mb-3" src=${img} alt="" />
       ${this.displayText(text)}
@@ -13,7 +12,7 @@ export class sidebarDisplay {
       </div>`;
         const closeSide = document.getElementById("close-btn");
         closeSide.addEventListener("click", () => {
-            div.classList.remove("show-side");
+            sidebar.classList.remove("show-side");
         });
     }
     displayText(text) {

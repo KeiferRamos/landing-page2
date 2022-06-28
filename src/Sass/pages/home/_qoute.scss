@@ -9,12 +9,16 @@
   @include displayFlex(center);
   text-align: center;
 
-  button {
-    height: 60px;
-    width: 160px;
-    border-radius: 50px;
-    background: $neon;
-    color: $main-font-light;
-    position: relative;
-  }
+  // a {
+  //   font-size: map-get($map: $font-sizes, $key: "md");
+  //   display: inline-block;
+  //   height: 60px;
+  //   line-height: 60px;
+  //   width: 160px;
+  //   border-radius: 50px;
+  //   background: $neon;
+  //   color: $main-font-light;
+  //   position: relative;
+  //   cursor: pointer;
+  // }
 }

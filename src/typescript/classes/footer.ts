@@ -1,13 +1,11 @@
 import { serviceLinks } from "../data/serviceLink.js";
 import { socialMedias } from "../data/socialmedias.js";
-import { info } from "../interfaces/info";
+import { sidebarData } from "../data/sidebar.js";
 
 export class footerDisplay {
-  constructor(private footerContent: info) {}
-
   format(id: string) {
     const container = document.getElementById(id) as HTMLElement;
-    const { text, contacts } = this.footerContent;
+    const { text, contacts } = sidebarData;
 
     const content = `
         <div class="footer-content pt-2">

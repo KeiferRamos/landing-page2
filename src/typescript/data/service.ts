@@ -65,3 +65,41 @@ export const expertise: serviceInfo[] = [
       "Dedicated account manager, project manager and consistent delivery team provided.",
   },
 ];
+
+export const traitsInfo: serviceInfo[] = [
+  {
+    img: "https://bananweb.com/wp-content/uploads/2019/04/fast_secure.svg",
+    title: "Fast Execution",
+    details:
+      "We are committed and focused to work with you to ensure that each and every issue receives immediate & appropriate response.",
+  },
+  {
+    img: "https://bananweb.com/wp-content/uploads/2019/04/reliable.svg",
+    title: "Reliable",
+    details:
+      "Streamlined delivery, cost-effective projects, designed to match your goals, timeline and budget.",
+  },
+  {
+    img: "https://bananweb.com/wp-content/uploads/2019/04/brand-mark.svg",
+    title: "Quality",
+    details:
+      "Our team of cutting edge SEO specialists, analysts and developers are always on top of the latest tech and design trends.",
+  },
+  {
+    img: "https://bananweb.com/wp-content/uploads/2016/11/1456956050_001_036_hot_air_baloon.svg",
+    title: "Low Risk",
+    details: "We deliver every one of our projects in a very transparent way.",
+  },
+  {
+    img: "https://bananweb.com/wp-content/uploads/2019/04/experts.svg",
+    title: "Experts",
+    details:
+      "Our experts are trained, certified and experienced across a variety of E-Marketing.",
+  },
+  {
+    img: "https://bananweb.com/wp-content/uploads/2019/04/cost-effective.svg",
+    title: "Cost Effective",
+    details:
+      "Contract terms are negotiated to suit the realities and requirements of each project.",
+  },
+];

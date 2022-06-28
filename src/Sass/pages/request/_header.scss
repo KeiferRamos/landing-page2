@@ -1,0 +1,22 @@
+@use "../../utils" as *;
+@use "../../mixins" as *;
+
+.request-header {
+  background: $main-bg-dark;
+  color: $main-font-light;
+  @include displayFlex(center);
+
+  h1 {
+    width: 100%;
+    font-size: map-get($map: $font-sizes, $key: "xl");
+    text-align: center;
+  }
+
+  p {
+    @extend .request-header;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
