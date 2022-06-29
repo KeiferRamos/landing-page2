@@ -1,0 +1,21 @@
+@use "../../mixins" as *;
+@use "../../utils" as *;
+
+.projects {
+  header {
+    h2 {
+      font-size: 40px;
+    }
+
+    text-align: center;
+  }
+
+  .project-imgs {
+    @include displayFlex(center);
+  }
+
+  .next-btns {
+    @extend .project-imgs;
+    font-size: 40px;
+  }
+}

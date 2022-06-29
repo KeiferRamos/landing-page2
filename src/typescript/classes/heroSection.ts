@@ -19,7 +19,6 @@ export class displayContent {
       }
       this.displayContent = this.content[this.currentDisplay];
       this.format("container");
-      console.log("g");
     }, 1700);
 
     container.innerHTML = `
