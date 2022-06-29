@@ -11,16 +11,8 @@ export class servicePageDisplay {
       ({ main }) => pageTitle == main
     )!;
 
-    const {
-      img,
-      title,
-      main,
-      subheading,
-      subtitle,
-      details,
-      qualities,
-      features,
-    } = content;
+    const { img, title, main, subheading, subtitle, details, qualities } =
+      content;
 
     const container = document.getElementById("wrapper") as HTMLDivElement;
 
