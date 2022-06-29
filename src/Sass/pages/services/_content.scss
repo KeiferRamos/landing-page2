@@ -1,0 +1,28 @@
+@use "../../utils" as *;
+@use "../../mixins" as *;
+
+.container {
+  display: grid;
+  place-items: center;
+
+  #service-content {
+    @include displayFlex(center);
+    width: 1200px;
+
+    @include breakpoints(1200px) {
+      width: 100%;
+    }
+
+    div {
+      width: 360px;
+      height: 600px;
+      padding: 30px 40px;
+      display: grid;
+
+      @include breakpoints(600px) {
+        width: 330px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

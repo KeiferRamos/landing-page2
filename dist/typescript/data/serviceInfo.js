@@ -1,7 +1,7 @@
 export const service = [
     {
         img: "https://bananweb.com/wp-content/uploads/2016/12/services2.png",
-        title: "Web Design",
+        title: "Web Design & Development",
         bg: "lightblue",
         details: "Our in-house development team creates functional, fast loading, clean code & SEO friendly websites that are optimized for performance and usability with clean URL.",
     },
@@ -13,7 +13,7 @@ export const service = [
     },
     {
         img: "https://bananweb.com/wp-content/uploads/2016/12/services3.png",
-        title: "SEO",
+        title: "Search Engine Optimization",
         bg: "red",
         details: "Search Engine Optimization Structured data can help you to send the right signals to search engines about your business and content.",
     },
@@ -31,7 +31,7 @@ export const service = [
     },
     {
         img: "https://bananweb.com/wp-content/uploads/2016/12/services5.png",
-        title: "Mobile App Development",
+        title: "Search Engine Optimization",
         bg: "gray",
         details: "If you’re looking to leverage mobile technology for your business, our best app developers are at your service. We provide iOS and Android mobile application development services so you can reach your customers on their favorite devices.",
     },

@@ -1,8 +1,8 @@
 import { serviceLink } from "../interfaces/info";
 
 export const serviceLinks: serviceLink[] = [
-  { path: "#", name: "Home" },
-  { path: "#", name: "Request for a Quotation" },
+  { path: "../../../index.html", name: "Home" },
+  { path: "../../../qoute.html", name: "Request for a Quotation" },
   { path: "#", name: "Contact Us" },
   { path: "#", name: "Branding" },
   { path: "#", name: "Web design" },

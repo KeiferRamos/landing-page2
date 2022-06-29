@@ -33,7 +33,10 @@ export class serviceInfoDisplay {
           <img src=${img} />
           <h3>${title}</h3>
           <p>${details}</p>
-          <a href="#">${title}&nbsp; <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="../../../serviceInfo.html?title=${title}">
+            ${title}&nbsp; 
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>`;
       })
       .join("");
