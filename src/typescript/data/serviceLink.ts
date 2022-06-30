@@ -3,7 +3,7 @@ import { serviceLink } from "../interfaces/info";
 export const serviceLinks: serviceLink[] = [
   { path: "./index.html", name: "Home" },
   { path: "./qoute.html", name: "Request for a Quotation" },
-  { path: "./serviceInfo.html?title=Contact Us", name: "Contact Us" },
+  { path: "./contacts.html", name: "Contact Us" },
   { path: "./serviceInfo.html?title=Branding", name: "Branding" },
   {
     path: "./serviceInfo.html?title=Web Design & Development",
