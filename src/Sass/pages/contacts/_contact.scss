@@ -1,0 +1,52 @@
+@use "../../mixins" as *;
+@use "../../utils" as *;
+
+.contact-form {
+  display: grid;
+  place-items: center;
+  margin: 70px 0;
+
+  .form-container {
+    width: 1200px;
+    @include displayFlex(center);
+
+    @include breakpoints(1200px) {
+      width: 100%;
+    }
+
+    img {
+      @include breakpoints(500px) {
+        width: 90%;
+      }
+    }
+
+    .input-field {
+      width: 500px;
+
+      @include breakpoints(500px) {
+        width: 100%;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contact-us {
+  @include displayFlex(center);
+  padding: 30px 0;
+
+  div {
+    @extend .contact-us;
+
+    img {
+      width: 60px;
+    }
+  }
+}

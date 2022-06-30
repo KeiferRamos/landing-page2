@@ -20,8 +20,8 @@ window.addEventListener("DOMContentLoaded", () => {
     displayServiceContent.format(".service-container");
     const displayExpertiseContent = new serviceDisplay(expertise);
     displayExpertiseContent.format(".expertise-container");
-    const displayReviewsContent = new reviewsDisplay();
-    displayReviewsContent.format("reviews");
+    const displayReviewsContent = new reviewsDisplay("reviews");
+    displayReviewsContent.format();
     const displayProjectsContent = new displayProjects(projectImgs, "projects");
     displayProjectsContent.resize();
     displayProjectsContent.format();

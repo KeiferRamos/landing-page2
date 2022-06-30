@@ -64,19 +64,18 @@ textarea {
   outline: none;
 }
 
-.btn {
-  border-radius: 50px;
-  color: $main-font-light;
-  line-height: 50px;
-  text-align: center;
-  display: inline-block;
-  font-size: map-get($map: $font-sizes, $key: "md");
+input[type="text"] {
+  height: 60px;
+  border: none;
+  background: #c7e3f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
 }
 
-.btn-dark {
-  background: $main-bg-dark;
-}
-
-.btn-light {
-  background: $neon;
+textarea {
+  height: 150px;
+  background: #c7e3f1;
+  border-radius: 5px;
+  outline: none;
 }

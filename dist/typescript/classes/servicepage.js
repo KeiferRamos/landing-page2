@@ -4,7 +4,7 @@ export class servicePageDisplay {
         const pageTitle = window.location.href
             .split("=")[1]
             .replace(new RegExp("%20", "g"), " ");
-        const content = serviceInfoData.find(({ main }) => pageTitle == main);
+        const content = serviceInfoData.find(({ main }) => main.startsWith(pageTitle));
         const { img, title, main, subheading, subtitle, details, qualities } = content;
         const container = document.getElementById("wrapper");
         container.innerHTML = ` 

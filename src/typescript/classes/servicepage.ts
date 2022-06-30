@@ -7,8 +7,8 @@ export class servicePageDisplay {
       .split("=")[1]
       .replace(new RegExp("%20", "g"), " ");
 
-    const content: serviceMoreInfo = serviceInfoData.find(
-      ({ main }) => pageTitle == main
+    const content: serviceMoreInfo = serviceInfoData.find(({ main }) =>
+      main.startsWith(pageTitle)
     )!;
 
     const { img, title, main, subheading, subtitle, details, qualities } =
