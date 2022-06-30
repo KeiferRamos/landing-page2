@@ -1,0 +1,70 @@
+@use "../../mixins" as *;
+@use "../../utils" as *;
+
+.reviews {
+  height: 500px;
+  margin: 100px 0;
+
+  @include breakpoints(500px) {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  @include displayFlex(center);
+  gap: 50px;
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .user-review {
+    width: 500px;
+    height: 300px;
+    background: $tertiary-bg;
+    border-radius: 82% 18% 0% 100% / 0% 27% 73% 100%;
+    position: relative;
+    color: $main-font-light;
+    display: grid;
+    place-items: center;
+
+    .author {
+      color: orange;
+      font-weight: lighter;
+    }
+
+    .toggle-review {
+      position: absolute;
+      @include displayFlex(center);
+      top: 100%;
+    }
+
+    .review-container {
+      position: absolute;
+      width: 450px;
+
+      i {
+        color: orange;
+      }
+
+      @include breakpoints(500px) {
+        width: 300px;
+      }
+    }
+
+    @include breakpoints(500px) {
+      width: 330px;
+      height: 450px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $tertiary-bg;
+      border-radius: 0% 100% 82% 18% / 77% 100% 0% 23%;
+    }
+  }
+}
