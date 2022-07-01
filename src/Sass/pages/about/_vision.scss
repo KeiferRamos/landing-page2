@@ -1,0 +1,45 @@
+@use "../../utils" as *;
+@use "../../mixins" as *;
+
+.vision {
+  display: grid;
+  place-items: center;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoints(600px) {
+    width: 100%;
+  }
+
+  .img-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include breakpoints(600px) {
+      width: 100%;
+    }
+  }
+
+  .img-2 {
+    position: absolute;
+    top: calc(100% - 150px);
+  }
+
+  header {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    text-align: center;
+
+    @include breakpoints(600px) {
+      width: 100%;
+
+      h4 {
+        color: #fff;
+      }
+    }
+  }
+}

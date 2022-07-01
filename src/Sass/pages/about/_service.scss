@@ -1,0 +1,36 @@
+@use "../../utils" as *;
+@use "../../mixins" as *;
+
+.service-section {
+  @include displayFlex(center);
+  flex-wrap: nowrap;
+  gap: 50px;
+  padding: 100px;
+
+  @include breakpoints(500px) {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .next-btn {
+    display: grid;
+  }
+
+  .content {
+    width: 900px;
+    @include displayFlex(center);
+
+    header {
+      flex: 1;
+    }
+
+    img {
+      width: 500px;
+      max-height: 300px;
+
+      @include breakpoints(500px) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -10,4 +10,5 @@ export interface serviceInfo {
   title: string;
   details: string;
   bg?: string;
+  path?: string;
 }

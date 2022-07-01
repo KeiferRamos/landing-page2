@@ -35,3 +35,9 @@ export interface feature {
   title: string;
   details: string;
 }
+
+export interface member {
+  img: string;
+  position: string;
+  name: string;
+}

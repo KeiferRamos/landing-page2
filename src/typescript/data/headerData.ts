@@ -2,4 +2,5 @@ export const headerData: string[] = [
   "Request for a Quotation",
   "Our Service",
   "Contact Us",
+  "About our agency",
 ];

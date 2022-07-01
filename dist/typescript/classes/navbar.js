@@ -6,7 +6,7 @@ export class navbarDisplay {
         <i id="toggle-btn" class="fa-solid fa-bars"></i>
         <ul class="links">
             <li class="p-1-3"><a href="./index.html">Home</a></li>
-            <li class="p-1-3"><a href="">About Banan</a></li>
+            <li class="p-1-3"><a href="./about.html">About Banan</a></li>
             <li class="p-1-3"><a href="./contacts.html">Contact</a></li>
         </ul>
         <button id="toggle-sidebar">
